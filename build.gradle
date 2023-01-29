@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.6.21'
     id 'org.jetbrains.kotlin.plugin.jpa' version '1.6.21' // kotlin에서 jpa를 사용할 때 기본 생성자를 필요없게 해줌
+    id 'org.jetbrains.kotlin.plugin.spring' version '1.6.21' // kotlin에서 spring을 사용할 때 @Transaciton과 같은 어노테이션을 쉽게 사용할 수 있게 해줌
 }
 
 group = 'com.group'
