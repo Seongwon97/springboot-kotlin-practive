@@ -42,7 +42,7 @@ class UserServiceTest @Autowired constructor(
             )
         )
 
-        val results = userService.users
+        val results = userService.getUsers()
 
         assertThat(results).hasSize(2)
         assertThat(results).extracting("name").containsExactlyInAnyOrder("A", "B")
