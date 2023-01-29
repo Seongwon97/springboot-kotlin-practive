@@ -50,7 +50,12 @@ class BookServiceTest @Autowired constructor(
         val bookName = "이펙티브 코틀린"
         val userName = "오성원"
         bookRepository.save(Book(bookName))
-        val savedUser = userRepository.save(User(userName, null))
+        val savedUser = userRepository.save(
+            User(
+                userName,
+                null
+            )
+        )
         val request = BookLoanRequest(userName, bookName)
 
         bookService.loanBook(request)
@@ -68,7 +73,12 @@ class BookServiceTest @Autowired constructor(
         val bookName = "이펙티브 코틀린"
         val userName = "오성원"
         bookRepository.save(Book(bookName))
-        val savedUser = userRepository.save(User(userName, null))
+        val savedUser = userRepository.save(
+            User(
+                userName,
+                null
+            )
+        )
         userLoanHistoryRepository.save(UserLoanHistory(savedUser, bookName, false))
         val request = BookLoanRequest(userName, bookName)
 
@@ -84,7 +94,12 @@ class BookServiceTest @Autowired constructor(
         val bookName = "이펙티브 코틀린"
         val userName = "오성원"
         bookRepository.save(Book(bookName))
-        val savedUser = userRepository.save(User(userName, null))
+        val savedUser = userRepository.save(
+            User(
+                userName,
+                null
+            )
+        )
         userLoanHistoryRepository.save(UserLoanHistory(savedUser, bookName, false))
         val request = BookReturnRequest(userName, bookName)
 

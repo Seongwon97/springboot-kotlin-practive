@@ -1,5 +1,6 @@
 package com.group.libraryapp.service.user;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +24,7 @@ public class UserService {
 
     @Transactional
     public void saveUser(UserCreateRequest request) {
-        User newUser = new User(request.getName(), request.getAge());
+        User newUser = new User(request.getName(), request.getAge(), Collections.emptyList(), null);
         userRepository.save(newUser);
     }
 
